@@ -1,0 +1,23 @@
+<div class="product__item">
+  <img [src]="product.image" [alt]="product.title" class="product__img" />
+
+  <h2 class="product__title">{{ product.title }}</h2>
+
+  <p class="product__price">Price: {{ product.price | currency : "EUR" }}</p>
+
+  <button
+    class="product__btn"
+    (click)="showDetails = !showDetails"
+    [ngClass]="{
+      'product__btn--show': showDetails,
+      'product__btn--hide': !showDetails
+    }"
+  >
+    {{ showDetails ? "Hide" : "Show" }} details
+  </button>
+
+  <div *ngIf="showDetails">
+    <p>{{ product.description }}</p>
+    <h4>Rate: {{ product.rating.rate }}</h4>
+  </div>
+</div>
