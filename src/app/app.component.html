@@ -1,6 +1,13 @@
 <div class="app">
   <h1 class="app__title">{{ title | titlecase }}</h1>
 
-  <app-product [productProp]="products[0]"></app-product>
-  <app-product [productProp]="products[1]"></app-product>
+  <p *ngIf="loading" class="app__loading">Loading</p>
+
+  <!-- <app-product [productProp]="products[0]"></app-product>
+  <app-product [productProp]="products[1]"></app-product> -->
+
+  <app-product
+    *ngFor="let product of products; let i = index"
+    [productProp]="product"
+  ></app-product>
 </div>
