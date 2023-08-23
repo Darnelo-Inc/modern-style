@@ -9,7 +9,8 @@ import { GlobalErrorComponent } from "./components/global-error/global-error.com
 import { FormsModule, ReactiveFormsModule } from "@angular/forms"
 import { SearchProductsPipe } from "./pipes/search-products.pipe"
 import { ModalComponent } from "./components/modal/modal.component"
-import { CreateProductModalComponent } from "./components/create-product-modal/create-product-modal.component"
+import { CreateProductModalComponent } from "./components/create-product-modal/create-product-modal.component";
+import { FocusDirective } from './directives/focus.directive'
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CreateProductModalComponent } from "./components/create-product-modal/c
     SearchProductsPipe,
     ModalComponent,
     CreateProductModalComponent,
+    FocusDirective,
   ],
   imports: [
     BrowserModule,

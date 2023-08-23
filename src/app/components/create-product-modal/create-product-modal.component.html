@@ -4,6 +4,7 @@
     class="create__input"
     placeholder="Product name"
     formControlName="title"
+    appFocus
   />
 
   <p *ngIf="title.hasError('required') && title.touched" class="create__error">
