@@ -1,5 +1,17 @@
-<form>
-  <input type="text" class="create__input" placeholder="Product name" />
+<form [formGroup]="form" (ngSubmit)="submitHandler()">
+  <input
+    type="text"
+    class="create__input"
+    placeholder="Product name"
+    formControlName="title"
+  />
+
+  <p *ngIf="title.hasError('required') && title.touched" class="create__error">
+    Field required!
+  </p>
+  <p *ngIf="title.hasError('minlength') && title.touched" class="create__error">
+    At least 3 symbols required!
+  </p>
 
   <button type="submit" class="create__btn">Create</button>
 </form>
