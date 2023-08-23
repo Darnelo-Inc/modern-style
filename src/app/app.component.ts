@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   // products: IProduct[] = []
   loading = false
   products$: Observable<IProduct[]>
+  search = ""
 
   constructor(
     private productsServie: ProductService,

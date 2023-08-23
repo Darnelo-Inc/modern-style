@@ -3,7 +3,7 @@ html {
 }
 
 .app {
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
   margin: 0 auto;
   padding-top: 1.25rem;
@@ -47,4 +47,13 @@ html {
 .app__loading::after {
   content: "";
   animation: loading 1s infinite;
+}
+
+.app__filter {
+  width: 100%;
+  margin: 1.4rem 0;
+  padding: .45rem .6rem;
+
+  border: .05rem solid black;
+  border-radius: .3rem;
 }
