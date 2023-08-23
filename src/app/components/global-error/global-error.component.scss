@@ -1,0 +1,27 @@
+.error {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+
+  color: rgb(255 255 255);
+
+  background-color: rgb(220 38 38);
+}
+
+.error__closeBtn {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+
+  font-size: 2rem;
+  color: rgb(255 255 255);
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  transform: translate3d(0, -50%, 0);
+}

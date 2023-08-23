@@ -15,9 +15,12 @@
 
 .product__img {
   width: 150px;
+  margin-bottom: 2rem;
 }
 
 .product__price {
+  margin: 1.5rem 0;
+
   font-size: 1.1rem;
   font-style: italic;
   font-weight: 600;
@@ -26,6 +29,7 @@
 .product__btn {
   display: inline-block;
   vertical-align: middle;
+  margin-bottom: 1rem;
   padding: .3rem .65rem;
 
   font-size: .85rem;

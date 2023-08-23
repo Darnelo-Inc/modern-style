@@ -1,3 +1,5 @@
+<app-global-error></app-global-error>
+
 <div class="app">
   <h1 class="app__title">{{ title | titlecase }}</h1>
 
@@ -7,7 +9,7 @@
   <app-product [productProp]="products[1]"></app-product> -->
 
   <app-product
-    *ngFor="let product of products; let i = index"
+    *ngFor="let product of products$ | async; let i = index"
     [productProp]="product"
   ></app-product>
 </div>
