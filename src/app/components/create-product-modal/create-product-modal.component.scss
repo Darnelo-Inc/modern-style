@@ -1,0 +1,23 @@
+.create__input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+
+  border: 1px solid #E5E7EB;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.create__btn {
+  display: block;
+  padding: .5rem 1rem;
+  margin: 0 auto;
+
+  color: #fff;
+
+  background-color: #3b82f6;
+  border: none;
+  cursor: pointer;
+}
