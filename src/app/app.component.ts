@@ -3,6 +3,7 @@ import { IProduct } from "./models/product"
 import { ProductService } from "./services/products.service"
 import { Observable, tap } from "rxjs"
 import { ErrorService } from "./services/error.service"
+import { ModalService } from "./services/modal.service"
 
 @Component({
   selector: "app-root",
@@ -18,7 +19,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     private productsServie: ProductService,
-    private errorService: ErrorService
+    private errorService: ErrorService,
+    public modalService: ModalService
   ) {}
 
   ngOnInit(): void {

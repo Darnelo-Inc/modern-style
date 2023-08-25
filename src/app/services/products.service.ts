@@ -21,6 +21,13 @@ export class ProductService {
     )
   }
 
+  create(product: IProduct): Observable<IProduct> {
+    return this.http.post<IProduct>(
+      "https://fakestoreapi.com/products",
+      product
+    )
+  }
+
   private errorHandler(error: HttpErrorResponse) {
     this.errorService.handle(error.message)
     return throwError(() => error.message)

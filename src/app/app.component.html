@@ -23,7 +23,9 @@
     ></app-product>
   </div>
 
-  <app-modal modalTitle="Create product"
+  <app-modal *ngIf="modalService.isVisible$ | async" modalTitle="Create product"
     ><app-create-product-modal></app-create-product-modal
   ></app-modal>
+
+  <button class="app__addProduct" (click)="modalService.open()">+</button>
 </div>
