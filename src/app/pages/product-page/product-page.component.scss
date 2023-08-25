@@ -1,0 +1,69 @@
+.app__title {
+  margin: .3rem 0 1rem;
+
+  text-align: center;
+}
+
+.app__loading {
+  margin-top: 5rem;
+
+  font-size: 2rem;
+  text-align: center;
+}
+
+@keyframes loading {
+  0% {
+    content: "";
+  }
+
+  25% {
+    content: ".";
+  }
+
+  50% {
+    content: "..";
+  }
+
+  75% {
+    content: "...";
+  }
+
+  100% {
+    content: "";
+  }
+}
+
+.app__loading::after {
+  content: "";
+  animation: loading 1s infinite;
+}
+
+.app__filter {
+  width: 100%;
+  margin: 1.4rem 0;
+  padding: .45rem .6rem;
+
+  border: .05rem solid black;
+  border-radius: .3rem;
+}
+
+.app__addProduct {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+
+  padding: .8rem 1.3rem;
+
+  font-size: 1.6rem;
+
+  background-color: rgb(255, 189, 47);
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+
+  transition: background .1s linear;
+
+  &:hover {
+    background-color: rgb(229, 172, 48);
+  }
+}

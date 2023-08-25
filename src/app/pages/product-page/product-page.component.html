@@ -1,0 +1,30 @@
+<h1 class="app__title">{{ title | titlecase }}</h1>
+
+<input
+  type="text"
+  class="app__filter"
+  placeholder="Search for..."
+  [(ngModel)]="search"
+/>
+
+<p *ngIf="loading" class="app__loading">Loading</p>
+
+<!-- <app-product [productProp]="products[0]"></app-product>
+  <app-product [productProp]="products[1]"></app-product> -->
+
+<div *ngIf="productsService.products" class="app__products">
+  <app-product
+    *ngFor="
+      let product of productsService.products | searchProducts : search;
+      let i = index
+    "
+    [productProp]="product"
+    class="app__product"
+  ></app-product>
+</div>
+
+<app-modal *ngIf="modalService.isVisible$ | async" modalTitle="Create product"
+  ><app-create-product-modal></app-create-product-modal
+></app-modal>
+
+<button class="app__addProduct" (click)="modalService.open()">+</button>
